@@ -20,7 +20,7 @@ description: "the mind is not a vessel to be filled but a fire to be lighted" # 
 #########################################################################################
 theme: "minima"
 
-rss: rss
+# rss: rss
 
 kramdown:
   syntax_highlighter_opts:
