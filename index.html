@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>rh42</title>
+<meta name="description" content="A shelf of small things — interactive neuroscience, built mostly for the pleasure of building them.">
+<link rel="icon" href="favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500..700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#f7f6f2; --surface:#ffffff; --text:#1c1829; --sub:#3d3453;
+    --dim:#5e5578; --faint:#9990b8; --line:#e7e3f0;
+    --primary:#6d28d9; --p-hover:#5b21b6; --p-light:#f5f3ff;
+    --display:'Fraunces',Georgia,serif;
+    --mono:'Space Mono',ui-monospace,monospace;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#141018; --surface:#1d1826; --text:#efeaf7; --sub:#c9c0e0;
+      --dim:#9990b8; --faint:#6b6088; --line:#2c2438;
+      --primary:#a78bfa; --p-hover:#c4b5fd; --p-light:#241b34;
+    }
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0; background:var(--bg); color:var(--text);
+    font-family:var(--mono); font-size:15px; line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:760px; margin:0 auto; padding:12vh 24px 16vh}
+  header{margin-bottom:8vh}
+  h1{
+    font-family:var(--display); font-weight:600; font-size:clamp(38px,9vw,64px);
+    line-height:1; letter-spacing:-.02em; margin:0 0 18px;
+  }
+  .blurb{color:var(--sub); font-size:15px; max-width:52ch; margin:0}
+  .blurb a{color:var(--primary); text-decoration:none; border-bottom:1px solid var(--line)}
+  .blurb a:hover{border-color:var(--primary)}
+
+  ul{list-style:none; margin:0; padding:0}
+  li{border-top:1px solid var(--line)}
+  li:last-child{border-bottom:1px solid var(--line)}
+  a.card{
+    display:grid; grid-template-columns:1fr auto; gap:4px 20px;
+    align-items:baseline; text-decoration:none; color:inherit;
+    padding:22px 8px; transition:background .15s, padding .15s;
+  }
+  a.card:hover{background:var(--p-light); padding-left:16px; padding-right:16px}
+  a.card:focus-visible{outline:2px solid var(--primary); outline-offset:-2px}
+  .t{font-family:var(--display); font-weight:600; font-size:21px; letter-spacing:-.01em}
+  .t .arrow{color:var(--faint); transition:transform .15s, color .15s; display:inline-block}
+  a.card:hover .t .arrow{color:var(--primary); transform:translate(3px,-3px)}
+  .d{font-size:12px; color:var(--faint); white-space:nowrap; text-align:right}
+  .desc{grid-column:1/2; color:var(--dim); font-size:13.5px; line-height:1.5}
+
+  footer{margin-top:10vh; color:var(--faint); font-size:12px; line-height:1.7}
+  footer a{color:var(--dim); text-decoration:none; border-bottom:1px solid var(--line)}
+  footer a:hover{color:var(--primary); border-color:var(--primary)}
+  .sig{margin-top:2px}
+
+  @media (prefers-reduced-motion: reduce){
+    *{transition:none !important}
+    a.card:hover{padding-left:8px; padding-right:8px}
+  }
+</style>
+</head>
+<body>
+<main class="wrap">
+  <header>
+    <h1>rh42</h1>
+    <p class="blurb">A shelf of small interactive things about brains — mostly built for the pleasure of building them. If one is useful to you too, that's a happy accident. Source lives on <a href="https://github.com/rh42">GitHub</a>.</p>
+  </header>
+
+  <ul>
+    <li><a class="card" href="/subclinical/">
+      <span class="t">Institute of Questionable Neuroclarity <span class="arrow">↗</span></span>
+      <span class="d">Jul 2026</span>
+      <span class="desc">A fake research institute that diagnoses your vibes and bills you for them. Itemised receipt included; existential VAT is 20%.</span>
+    </a></li>
+
+    <li><a class="card" href="/spin-test/">
+      <span class="t">The Spin Test <span class="arrow">↗</span></span>
+      <span class="d">May 2026</span>
+      <span class="desc">A brain explains, in first person, why spatial smoothness fakes correlations — and makes you spin it 1000 times to prove the fix.</span>
+    </a></li>
+
+    <li><a class="card" href="/sfc/">
+      <span class="t">A Gentle Tour of SFC <span class="arrow">↗</span></span>
+      <span class="d">May 2026</span>
+      <span class="desc">Structural–functional coupling, made interactive without dumbing it down. How brain wiring predicts brain activity.</span>
+    </a></li>
+
+    <li><a class="card" href="/stage-linkage/">
+      <span class="t">Stage-Linkage &amp; Its Limits <span class="arrow">↗</span></span>
+      <span class="d">May 2026</span>
+      <span class="desc">A visual essay on dopamine and alpha-synuclein across Parkinson's and schizophrenia. There is an easter egg. Nobody has to find it.</span>
+    </a></li>
+
+    <li><a class="card" href="/salience/">
+      <span class="t">Which Brain Region Are You? <span class="arrow">↗</span></span>
+      <span class="d">May 2026</span>
+      <span class="desc">A personality quiz with real neuroanatomy underneath and a deadpan on top. You are, probably, the amygdala.</span>
+    </a></li>
+  </ul>
+
+  <footer>
+    <div>Built with real neuroscience and questionable restraint.</div>
+    <div class="sig">rh42 · <a href="https://github.com/rh42">github</a></div>
+  </footer>
+</main>
+<script>
+/* for the one person who opens the console */
+console.log("%cyou trimmed the URL and then opened the console. we would get along.","font-family:monospace;font-size:13px;color:#6d28d9");
+</script>
+</body>
+</html>
